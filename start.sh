@@ -18,7 +18,7 @@ org2ca="$(ls crypto-config/peerOrganizations/org2.example.com/ca | grep _sk)"
 org3ca="$(ls crypto-config/peerOrganizations/org3.example.com/ca | grep _sk)"
 
 # run orderer
-ORG1_HOSTNAME=$ORG1_HOSTNAME docker stack deploy -c docker-compose-orderer.yaml cloudex
+ORG1_HOSTNAME=$ORG1_HOSTNAME docker stack deploy -c docker-compose-orderer.yaml iiitg
 
 # run ca peers and cli
-org1ca=$org1ca org2ca=$org2ca org3ca=$org3ca ORG1_HOSTNAME=$ORG1_HOSTNAME ORG2_HOSTNAME=$ORG2_HOSTNAME ORG3_HOSTNAME=$ORG3_HOSTNAME docker stack deploy -c docker-compose.yaml cloudex
+org1ca=$org1ca org2ca=$org2ca org3ca=$org3ca ORG1_HOSTNAME=$ORG1_HOSTNAME ORG2_HOSTNAME=$ORG2_HOSTNAME ORG3_HOSTNAME=$ORG3_HOSTNAME docker stack deploy -c docker-compose.yaml iiitg
